@@ -9,14 +9,14 @@ document.getElementById("Loginbtn").addEventListener("click", function (e) {
   //pin
   const pinNumberValue = document.getElementById("pin-number").value;
   const pinNumberValueConverted = parseInt(pinNumberValue);
-  console.log(mobileNumberValueConverted, pinNumberValueConverted);
+  // console.log(mobileNumberValueConverted, pinNumberValueConverted);
 
   if (
     mobileNumberValueConverted === mobileNumber &&
     pinNumberValueConverted === pinNumber
   ) {
-    console.log("all values matched");
+    window.location.href = "./home.html";
   } else {
-    console.log("invalid credentials");
+    alert("invalid credentials");
   }
 });
