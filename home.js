@@ -1,4 +1,5 @@
 const validPin = 1234;
+//add money feature
 document
   .getElementById("add-money-btn")
   .addEventListener("click", function (e) {
@@ -30,6 +31,22 @@ document
     document.getElementById("available-balance").innerText =
       totalNewAvailableBalance;
   });
+
+//cashOut money feature
+
+document.getElementById("withdraw-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  const amount = parseInt(document.getElementById("withdraw-amount").value);
+  const availableBalance = parseInt(
+    document.getElementById("available-balance").innerText
+  );
+
+  const totalNewAvailableBalance = availableBalance - amount;
+
+  console.log(totalNewAvailableBalance);
+  document.getElementById("available-balance").innerText =
+    totalNewAvailableBalance;
+});
 
 // toggling feature
 document.getElementById("add-button").addEventListener("click", function () {
